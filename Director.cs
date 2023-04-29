@@ -65,6 +65,5 @@ namespace task5
         }
 
         public override string ToString() => $"[name: {Name}, workExperience: {WorkExperience}, salary: {Salary}, companyName: {CompanyName}]\n";
-        
     }
 }

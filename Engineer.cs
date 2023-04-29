@@ -25,9 +25,7 @@ namespace task5
 
         public double getAnnualSalary()
         {
-            double experinceBonus = WorkExperience * 5000;
-            return this.Salary + experinceBonus;
+            return this.Salary + WorkExperience * 5000;
         }
-
     }
 }
