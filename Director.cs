@@ -10,7 +10,7 @@ namespace task5
     {
         public string CompanyName { get; set; }
         public List<Engineer> wards = new();
-
+        
         public Director(string name, int workExperince, double salary, string companyName) : base(name, workExperince, salary)
         {
             this.CompanyName = companyName;
@@ -31,9 +31,9 @@ namespace task5
             try
             {
                 Worker worker = (Worker)engineer;
-                if (wards.Contains(engineer))
+                if (wards.Contains(worker))
                 {
-                    engineer.Salary *= 1.2;
+                    worker.Salary *= 1.2;
                 }
             }
             catch (InvalidCastException e)
@@ -47,7 +47,7 @@ namespace task5
             try
             {
                 Worker worker = (Worker)engineer;
-                wards.Add(engineer);                
+                wards.Add(worker);                
             } catch (InvalidCastException e)
             {
                 Console.WriteLine("You can't add a director to the list of wards!");

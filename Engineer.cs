@@ -8,14 +8,13 @@ namespace task5
 {
     abstract class Engineer : IEmployee
     {
-        protected string name;
-        protected int WorkExperience { get; set; }
+        public int WorkExperience { get; set; }
         public double Salary { get; set; }
-        public string Name { get => name; set => name = value; }
+        public string Name { get; set; }
 
         public Engineer(string engineerName, int workExperience, double salary)
         {
-            name = engineerName;
+            Name = engineerName;
             WorkExperience = workExperience;
             Salary = salary;
         }
